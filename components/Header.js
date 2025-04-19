@@ -76,10 +76,10 @@ const Header = () => {
                         initial={{ y: 30, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.6, delay: 1.2 }}
-                        href="/sample-resume.pdf" download className='px-7 py-1  font-semibold  xl:py-1 md:px-5 border rounded-full border-gray-500 dark:border-gray-200 text-center flex items-center gap-2
-                    hover:text-white
-                    hover:bg-black/80
-                     dark:hover:text-black dark:hover:bg-white transition duration-400'>My Resume <FaDownload /> </motion.a>
+                        href="/sample-resume.pdf" download className='px-7 py-1  font-semibold  xl:py-1 md:px-5 border 
+                        rounded-full border-gray-500 dark:border-gray-200 text-center flex items-center justify-center
+                        gap-2 hover:text-white hover:bg-black/80 dark:hover:text-black dark:hover:bg-white
+                         transition duration-400'>My Resume <FaDownload /> </motion.a>
                 </div>
             </div>
         </>
