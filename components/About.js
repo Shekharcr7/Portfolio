@@ -2,10 +2,11 @@ import { assets, infoList, toolsData } from '@/assests/assets'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'motion/react'
-import { delay } from 'motion'
+
 
 const About = (isDarkMode, setisDarkMode) => {
-
+   
+  
   return (
     <>
       <motion.div
@@ -41,7 +42,7 @@ const About = (isDarkMode, setisDarkMode) => {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="max-w-3xl leading-5 flex flex-col gap-5  justify-center text-center 2xl:text-start items-center 2xl:items-start">
             <p>
-              I'm a passionate developer with a strong foundation in full-stack web development, Java-based backend systems, and machine learning. I enjoy building practical and impactful solutions, whether it's a web app, a robust API, or an intelligent ML model. Always eager to learn and explore new technologies!
+              I&apos;m a passionate developer with a strong foundation in full-stack web development, Java-based backend systems, and machine learning. I enjoy building practical and impactful solutions, whether it&apos;s a web app, a robust API, or an intelligent ML model. Always eager to learn and explore new technologies!
             </p>
             <motion.ul
               initial={{ opacity: 0 }}

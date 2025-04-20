@@ -5,8 +5,8 @@ import { FaArrowRight, FaDownload } from 'react-icons/fa'
 import { motion } from "motion/react"
 import Typed from "typed.js";
 
-
 const Header = () => {
+
 
     const el = useRef(null);
     const typed = useRef(null);
@@ -44,7 +44,7 @@ const Header = () => {
                     initial={{ y: -20, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className='text-lg md:text-2xl font-semibold'>Hi! I'm Boddapu Chandra Shekhar👋</motion.h2>
+                    className='text-lg md:text-2xl font-semibold'>Hi! I&apos;m Boddapu Chandra Shekhar👋</motion.h2>
                 <motion.h1
                     initial={{ y: -30, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
@@ -57,7 +57,7 @@ const Header = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
                     className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 text-sm sm:text-[0.9rem]">
-                    I’m a full-stack web developer skilled in React, Node.js, and MongoDB, building responsive and dynamic apps.
+                    I&apos;m a full-stack web developer skilled in React, Node.js, and MongoDB, building responsive and dynamic apps.
                     As a Java developer, I create efficient, scalable applications using Spring Boot and OOP principles.
                     I also work on machine learning projects using Python, TensorFlow, and scikit-learn.
                     My focus is on building practical, real-world solutions across web, backend, and AI domains.

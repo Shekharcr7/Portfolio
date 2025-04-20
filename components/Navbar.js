@@ -5,6 +5,7 @@ import sun1  from '@/public/sun1.svg'
 import moon from '@/public/moon.svg'
 
 const Navbar = ({isDarkMode , setisDarkMode}) => {
+
     const ref = useRef();
 
     const openMenu = ()=>{

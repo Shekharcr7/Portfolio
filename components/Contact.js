@@ -5,7 +5,11 @@ import { ToastContainer, toast } from 'react-toastify';
 
 
 
+
 const Contact = () => {
+
+
+
   const [result, setResult] = useState("");
   const [showRes, setshowRes] = useState(false)
 
@@ -23,7 +27,7 @@ const Contact = () => {
         theme: "dark",
       });
     }
-  }, [result])
+  }, [result , showRes])
 
   const delay = (s) => {
     return new Promise((resolve, reject) => {

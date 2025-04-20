@@ -1,5 +1,4 @@
 import { serviceData } from '@/assests/assets'
-import { delay } from 'motion'
 import { motion } from 'motion/react'
 import Image from 'next/image'
 import React from 'react'
@@ -7,6 +6,7 @@ import React from 'react'
 
 
 const Services = () => {
+
     return (
         <>
             <motion.div

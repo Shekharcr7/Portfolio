@@ -2,7 +2,10 @@
 import React from 'react'
 import { FaGithub, FaLinkedin, FaLinkedinIn, FaMailBulk, FaMailchimp, FaTwitter } from 'react-icons/fa'
 
+
 const Footer = () => {
+    
+
     return (
         <>
             <div className=''>
