@@ -15,7 +15,7 @@ const Footer = () => {
                     </h1>
                     <div className='w-max mx-auto flex gap-2 items-center'>
                         <FaMailBulk />
-                        chandrashekhar57779@gmail.com
+                        boddapushekhar2004@gmail.com
                     </div>
                 </div>
                 <div className='text-center lg:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6 text-sm lg:text-md'>
