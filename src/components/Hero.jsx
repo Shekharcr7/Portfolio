@@ -108,7 +108,7 @@ export default function Hero() {
             Explore My Work
             <ArrowRight size={16} />
           </a>
-          <a href="public/resume.pdf" download className="btn-secondary">
+          <a href="/Resume.pdf" download className="btn-secondary">
             <Download size={15} />
             Download Resume
           </a>

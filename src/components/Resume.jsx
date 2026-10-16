@@ -1,7 +1,10 @@
+
 import { motion } from 'framer-motion'
 import { FileText, Download } from 'lucide-react'
 
 export default function Resume() {
+  const resumeUrl = '/Resume.pdf'
+
   return (
     <section id="resume" className="section py-24 md:py-32">
       <motion.div
@@ -15,19 +18,34 @@ export default function Resume() {
           <div className="hidden sm:flex h-11 w-11 items-center justify-center rounded-xl border border-border text-signal shrink-0">
             <FileText size={18} strokeWidth={1.75} />
           </div>
+
           <div>
-            <h2 className="font-display text-2xl sm:text-3xl font-semibold">Want the complete picture?</h2>
+            <h2 className="font-display text-2xl sm:text-3xl font-semibold">
+              Want the complete picture?
+            </h2>
+
             <p className="mt-2.5 text-ink-muted max-w-md leading-relaxed">
-              Download my resume for a detailed overview of my education, projects, skills and experience.
+              Download my resume for a detailed overview of my education,
+              projects, skills and experience.
             </p>
           </div>
         </div>
 
         <div className="flex flex-wrap gap-3 shrink-0">
-          <a href="public/resume.pdf" target="_blank" rel="noreferrer" className="btn-secondary">
+          <a
+            href={resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+          >
             View Resume
           </a>
-          <a href="public/resume.pdf" download className="btn-primary">
+
+          <a
+            href={resumeUrl}
+            download="Chandra-Shekhar-Resume.pdf"
+            className="btn-primary"
+          >
             <Download size={15} />
             Download PDF
           </a>

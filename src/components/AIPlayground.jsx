@@ -37,18 +37,32 @@ function RagDemo() {
 
   return (
     <div>
-      <form onSubmit={run} className="flex gap-2">
-        <input
-          value={question}
-          onChange={(e) => setQuestion(e.target.value)}
-          placeholder="Ask a question about the documents…"
-          className="flex-1 bg-surface-2 border border-border rounded-lg px-4 py-2.5 text-sm text-ink placeholder:text-ink-faint focus:border-retrieval/50 outline-none"
-        />
-        <button type="submit" disabled={loading} className="btn-primary shrink-0 disabled:opacity-60">
-          {loading ? <Loader2 size={15} className="animate-spin" /> : <Send size={15} />}
-          Ask
-        </button>
-      </form>
+      
+<form
+  onSubmit={run}
+  className="flex flex-col min-[451px]:flex-row gap-2"
+>
+  <input
+    value={question}
+    onChange={(e) => setQuestion(e.target.value)}
+    placeholder="Ask a question about the documents…"
+    className="w-full min-w-0 min-[451px]:flex-1 bg-surface-2 border border-border rounded-lg px-4 py-2.5 text-sm text-ink placeholder:text-ink-faint focus:border-retrieval/50 outline-none"
+  />
+
+  <button
+    type="submit"
+    disabled={loading}
+    className="btn-primary shrink-0 self-center min-[451px]:self-auto disabled:opacity-60"
+  >
+    {loading ? (
+      <Loader2 size={15} className="animate-spin" />
+    ) : (
+      <Send size={15} />
+    )}
+    Ask
+  </button>
+</form>
+
       <p className="mt-2 text-xs text-ink-faint">Mocked responses — wire this up to a FastAPI backend to run the real pipeline.</p>
 
       <AnimatePresence mode="wait">
