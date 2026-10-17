@@ -37,31 +37,31 @@ function RagDemo() {
 
   return (
     <div>
-      
-<form
-  onSubmit={run}
-  className="flex flex-col min-[451px]:flex-row gap-2"
->
-  <input
-    value={question}
-    onChange={(e) => setQuestion(e.target.value)}
-    placeholder="Ask a question about the documents…"
-    className="w-full min-w-0 min-[451px]:flex-1 bg-surface-2 border border-border rounded-lg px-4 py-2.5 text-sm text-ink placeholder:text-ink-faint focus:border-retrieval/50 outline-none"
-  />
 
-  <button
-    type="submit"
-    disabled={loading}
-    className="btn-primary shrink-0 self-center min-[451px]:self-auto disabled:opacity-60"
-  >
-    {loading ? (
-      <Loader2 size={15} className="animate-spin" />
-    ) : (
-      <Send size={15} />
-    )}
-    Ask
-  </button>
-</form>
+      <form
+        onSubmit={run}
+        className="flex flex-col min-[451px]:flex-row gap-2"
+      >
+        <input
+          value={question}
+          onChange={(e) => setQuestion(e.target.value)}
+          placeholder="Ask a question about the documents…"
+          className="w-full min-w-0 min-[451px]:flex-1 bg-surface-2 border border-border rounded-lg px-4 py-2.5 text-sm text-ink placeholder:text-ink-faint focus:border-retrieval/50 outline-none"
+        />
+
+        <button
+          type="submit"
+          disabled={loading}
+          className="btn-primary shrink-0 self-center min-[451px]:self-auto disabled:opacity-60"
+        >
+          {loading ? (
+            <Loader2 size={15} className="animate-spin" />
+          ) : (
+            <Send size={15} />
+          )}
+          Ask
+        </button>
+      </form>
 
       <p className="mt-2 text-xs text-ink-faint">Mocked responses — wire this up to a FastAPI backend to run the real pipeline.</p>
 
@@ -111,7 +111,7 @@ const AGENT_STEPS = [
 ]
 
 function AgentDemo() {
-  const [query, setQuery] = useState('Research the latest developments in Multi Agent System?')
+  const [query, setQuery] = useState('Workflow of Multi Agent System?')
   const [running, setRunning] = useState(false)
   const [step, setStep] = useState(-1)
 
@@ -126,15 +126,15 @@ function AgentDemo() {
 
   return (
     <div>
-      <form onSubmit={run} className="flex gap-2">
+      <form onSubmit={run} className="flex flex-col min-[451px]:flex-row gap-2">
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Research the latest developments in RAG."
-          className="flex-1 bg-surface-2 border border-border rounded-lg px-4 py-2.5 text-sm text-ink placeholder:text-ink-faint focus:border-agent/50 outline-none"
+          placeholder="Workflow of Multi agent system."
+          className="w-full min-w-0 min-[451px]:flex-1 bg-surface-2 border border-border rounded-lg px-4 py-2.5 text-sm text-ink placeholder:text-ink-faint focus:border-retrieval/50 outline-none"
         />
-        <button type="submit" disabled={running} className="btn-primary shrink-0 disabled:opacity-60">
-          {running ? <Loader2 size={15} className="animate-spin" /> : <Send size={15} />}
+        <button type="submit" disabled={running} className="btn-primary shrink-0 self-center min-[451px]:self-auto disabled:opacity-60">
+          {running ? (<Loader2 size={15} className="animate-spin" />) : (<Send size={15} />)}
           Run
         </button>
       </form>
@@ -147,9 +147,8 @@ function AgentDemo() {
             <motion.div
               key={s.name}
               animate={{ opacity: step >= i || !running && step === -1 ? 1 : 0.4 }}
-              className={`flex items-center gap-3 rounded-lg border px-4 py-3 transition-colors ${
-                active ? 'border-agent/50 bg-agent/10' : done ? 'border-border bg-surface-2/40' : 'border-border'
-              }`}
+              className={`flex items-center gap-3 rounded-lg border px-4 py-3 transition-colors ${active ? 'border-agent/50 bg-agent/10' : done ? 'border-border bg-surface-2/40' : 'border-border'
+                }`}
             >
               <span className={`h-1.5 w-1.5 rounded-full shrink-0 ${active ? 'bg-agent' : done ? 'bg-ink-faint' : 'bg-border-strong'}`} />
               <div>
@@ -211,9 +210,8 @@ export default function AIPlayground() {
             <button
               key={t}
               onClick={() => setTab(t)}
-              className={`relative px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors ${
-                tab === t ? 'text-ink' : 'text-ink-faint hover:text-ink-muted'
-              }`}
+              className={`relative px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors ${tab === t ? 'text-ink' : 'text-ink-faint hover:text-ink-muted'
+                }`}
             >
               {t}
               {tab === t && (
